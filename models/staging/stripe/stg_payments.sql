@@ -1,9 +1,9 @@
 select
-    id as payment_id,
-    orderid as order_id,
-    paymentmethod as payment_method,
+    payment_id as id,
+    order_id as orderid,
+    payment_method as paymentmethod,
     status,
     -- amount is stored in cents, convert it to dollars
-    amount / 100 as amount,
-    created as created_at
-from {{ source('stripe', 'payment') }}
+    amount as amount / 100,
+    created_at as created
+from {{ source('stripe', 'stg_payment') }}
