@@ -5,5 +5,5 @@ sources:
     database: newdbt
     schema: jaffle_shop
     tables:
-      - name: customers
+      - name: stg_customers
       - name: stg_orders
