@@ -1,9 +1,0 @@
-version: 2
-
-sources:
-  - name: jaffle_shop
-    database: newdbt
-    schema: jaffle_shop
-    tables:
-      - name: stg_customers
-      - name: stg_orders
